@@ -1,0 +1,16 @@
+$$ testFile4.sp2021 -- should fail $$
+data z := 321 ;
+data y := 567 ;
+data z := 320 ; $$ z has already been declared in this scope $$
+main
+begin
+data x := 5 ;
+loop [ y => z ]
+  begin
+  data z := 3 ;
+     begin
+     proc x ; 
+     end
+  end ;
+outter x ;
+end

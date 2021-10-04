@@ -1,0 +1,9 @@
+$$ testFile.sp2021 -- good $$
+data x := 5 ;
+main
+begin
+data y := 67 ;
+outter y ;
+assign x := y ;
+outter x ;
+end
